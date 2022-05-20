@@ -1,0 +1,49 @@
+seed: 2022
+dataset:
+  train_filename: "train.csv"
+  val_filename: "validation.csv"
+  test_filename: "heuristics_test.csv"
+  preprocessing:
+    - "remove_hashtags"
+    - "remove_user_mentions"
+    - "remove_urls"
+    - "norm_whitespaces"
+  minimum_words: 5
+
+model_name: &model "allegro/herbert-base-cased"
+datamodule:
+  train_dataset_filename: "tweets_train.csv"
+  val_dataset_filename: "tweets_val.csv"
+  test_dataset_filename: "tweets_test.csv"
+  sampler_name: null
+  batch_size: 32
+  num_workers: 8
+  max_token_len: 512
+  seed: 2022
+
+model:
+  model_name: *model
+  learning_rate: !!float 1e-5
+  adam_epsilon: !!float 1e-8
+  weight_decay: 0.01
+  warmup_steps: 1000
+
+trainer:
+  gpus: [ 0 ]
+  max_epochs: 100
+  accumulate_grad_batches: 1
+  log_every_n_steps: 20
+
+callbacks:
+  early_stopping:
+    patience: 15
+    monitor: "val/f1_score"
+    mode: "max"
+  checkpoint:
+    monitor: "val/f1_score"
+    mode: "max"
+
+wandb_logger:
+  entity: "amc"
+  project: "politic_tweets"
+  name: "HerBERT_base"
