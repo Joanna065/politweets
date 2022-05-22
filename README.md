@@ -12,8 +12,8 @@ In total, this dataset consists of over 147k tweets from almost 10k Polish-writi
 
 The data is made available as six CSV files containing TweetID instead of explicit text, according to Twitter's guidelines about redistributing their content for scientific purposes.
 Files description:
-1) train.csv - 132 435 tweets with heuristically generated labels, 9452 users,
-2) validation.csv - 14 716 tweets with heuristically generated labels, 4867 users,
-3) manual_test.csv - 29 960 tweets manually annotated, 133 users,
-4) heuristics_test.csv - 29 960 tweets with heuristically generated labels, 133 users,
-5) manual_ambiguous_test.csv - 9 757 manually annotated tweets from 33 users whose political views are hard to define.
+1) `train.csv` - 132 435 tweets with heuristically generated labels, 9452 users,
+2) `validation.csv` - 14 716 tweets with heuristically generated labels, 4867 users,
+3) `manual_test.csv` - 29 960 tweets manually annotated, 133 users,
+4) `heuristics_test.csv` - 29 960 tweets with heuristically generated labels, 133 users,
+5) `manual_ambiguous_test.csv` - 9 757 manually annotated tweets from 33 users whose political views are hard to define.
