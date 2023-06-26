@@ -1,10 +1,8 @@
 # POLiTweets dataset 
-Authors: Joanna Baran, Michał Kajstura, Maciej Zi ́ołkowski, Krzysztof Rajda
+Authors: Joanna Baran, Michał Kajstura, Maciej Ziółkowski, Krzysztof Rajda
 
 Heuristically annotated collection of Polish tweets
 designed for the task of political profiling in a multi-party setup.
-
-More information can be read in our LREC 2022 paper from PoliticalNLP workshop.
 
 ## Dataset description
 POLiTweets is the first publicly open Polish dataset for political affiliation classification in a multi-party setup. Most labels were obtained using a novel universal method of semi-automated political leaning discovery.  It relies on a heuristical data annotation procedure based on user's likes distribution across posts from political parties' representatives.
@@ -17,3 +15,22 @@ Files description:
 3) `manual_test.csv` - 29 960 tweets manually annotated, 133 users,
 4) `heuristics_test.csv` - 29 960 tweets with heuristically generated labels, 133 users,
 5) `manual_ambiguous_test.csv` - 9 757 manually annotated tweets from 33 users whose political views are hard to define.
+
+## Citation
+Please cite our work if you use this dataset
+```
+@inproceedings{baran-etal-2022-twitter,
+    title = "Does {T}witter know your political views? {POL}i{T}weets dataset and semi-automatic method for political leaning discovery",
+    author = "Baran, Joanna  and
+      Kajstura, Micha{\l}  and
+      Ziolkowski, Maciej  and
+      Rajda, Krzysztof",
+    booktitle = "Proceedings of the LREC 2022 workshop on Natural Language Processing for Political Sciences",
+    month = jun,
+    year = "2022",
+    address = "Marseille, France",
+    publisher = "European Language Resources Association",
+    url = "https://aclanthology.org/2022.politicalnlp-1.8",
+    pages = "56--61",
+}
+```
